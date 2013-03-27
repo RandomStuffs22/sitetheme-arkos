@@ -1,4 +1,9 @@
-# [Roots Theme](http://www.rootstheme.com/)
+# arkOS Website Theme
+
+The theme for the main arkOS website, based off of Roots + Bootstrap.
+
+
+## [Roots Theme](http://www.rootstheme.com/)
 
 Roots is a starting WordPress theme made for developers that’s based on
 [HTML5 Boilerplate](http://html5boilerplate.com/) and [Bootstrap from Twitter](http://twitter.github.com/bootstrap/).

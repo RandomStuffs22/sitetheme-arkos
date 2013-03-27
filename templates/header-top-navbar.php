@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
       </a>
       <a class="brand" href="<?php echo home_url(); ?>/">
-        <?php bloginfo('name'); ?>
+        <img src="/img/arkos-logo-hd.png">
       </a>
       <nav class="nav-main nav-collapse" role="navigation">
         <?php
