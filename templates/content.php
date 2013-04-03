@@ -7,6 +7,8 @@
     <?php the_excerpt(); ?>
   </div>
   <footer>
+    <strong>Tags:</strong>
     <?php the_tags('<ul class="entry-tags"><li>','</li><li>','</li></ul>'); ?>
   </footer>
+  <hr />
 </article>
