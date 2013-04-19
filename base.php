@@ -13,6 +13,14 @@
     }
   ?>
 
+  <?php $key = 'subhead'; $themeta = get_post_meta($post->ID, $key, TRUE); if($themeta != '') { ?>
+  <div class="jumbotron subhead" id="overview">
+    <div class="container">
+      <h1><?php the_title(); ?></h1>
+    </div>
+  </div>
+  <?php } ?>
+
   <div class="wrap container" role="document">
     <div class="content row">
       <div class="main <?php echo roots_main_class(); ?>" role="main">
