@@ -2,9 +2,21 @@
    Base
    ========================================================================== */
 
+body {
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
+
+input, button, select, textarea {
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
+
 .content {
    margin-top: 20px;
    margin-bottom: 60px;
+}
+
+i, .icon-download {
+  background-position: -120px -23px;
 }
 
 
@@ -20,7 +32,8 @@
 .navbar-inner {
    background-color: #2D2D2D;
    background-image: none; 
-   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333',    endColorstr='#222222', GradientType=0);}
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333',    endColorstr='#222222', GradientType=0);
+   font-size: 16px;
 }
 
 .navbar .brand {
@@ -29,7 +42,7 @@
 
 .navbar .nav > li > a {
    padding: 30px 15px;
-   color: #FFFFFF;
+   color: #D0D0D0;
    text-shadow: 0px 0px 0px;
 }
 
@@ -50,11 +63,107 @@
    border-bottom-color: #FFFFFF;
 }
 
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+  color: #FFFFFF;
+  background-color: inherit;
+  box-shadow: 0px 0px 0px;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  color: #FFFFFF;
+  background-color: inherit;
+  box-shadow: 0px 0px 0px;
+}
+
+.dropdown-menu > li > a {
+  line-height: 30px;
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+  display: block;    
+}
+
+.dropdown .caret {
+  display: none;
+}
+
+.nav-tabs a {
+  outline: none;
+}
+
 @media (max-width:979px) {
    .navbar .nav > li > a:hover {
       color: inherit;
    }
 }
+
+/* Carousel base class */
+ .carousel {
+ }
+
+ .carousel .container {
+   position: relative;
+   z-index: 9;
+ }
+
+ .carousel-control {
+   height: 80px;
+   margin-top: 0;
+   font-size: 120px;
+   text-shadow: 0 1px 1px rgba(0,0,0,.4);
+   background-color: transparent;
+   border: 0;
+   z-index: 10;
+ }
+
+ .carousel-control:hover, .carousel-control:focus {
+  outline: none;
+}
+
+ .carousel .item {
+   height: 400px;
+ }
+ .carousel img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   min-width: 100%;
+   height: 400px;
+ }
+
+ .carousel-caption {
+   background-color: transparent;
+   position: static;
+   max-width: 550px;
+   padding: 0 20px;
+   margin-top: 100px;
+ }
+ .carousel-caption h1,
+ .carousel-caption .lead {
+   margin: 0;
+   line-height: 1.25;
+   color: #fff;
+   text-shadow: 0 1px 1px rgba(0,0,0,.4);
+ }
+ .carousel-caption .btn {
+   margin-top: 10px;
+ }
+
+ #slide-1 {
+  background: url('/img/slider-1.jpg') no-repeat center center;
+  background-size: cover;
+ }
+
+ #slide-2 {
+  background: url('/img/slider-2.jpg') no-repeat center center;
+  background-size: cover;
+ }
+
+ #slide-3 {
+  background: url('/img/slider-3.jpg') no-repeat center center;
+  background-size: cover;
+ }
+
 
 
 /* ==========================================================================
@@ -124,7 +233,9 @@
    Posts
    ========================================================================== */
 
-.hentry header { }
+.hentry header {
+  margin-bottom: 10px;
+}
 .hentry time { }
 .hentry .byline { }
 .hentry .entry-content { }
@@ -149,12 +260,6 @@
 
 .content-info a:hover {
    color: #EEEEEE;
-}
-
-@media (max-width:979px) {
-   p {
-      text-align: center;
-   }
 }
 
 html,
@@ -208,10 +313,55 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
+@media (max-width: 979px) {
+  .carousel .item {
+    height: 400px;
+  }
+  .carousel img {
+    width: auto;
+    height: 500px;
+  }
+  .navbar .nav > li > a {
+    padding: 20px 15px;
+  }
+  .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+    border-radius: 0px 0px 0px 0px;
+  }
+}
 
 @media (max-width: 767px){
   body {
     padding-top: 0;
+  }
+
+  .navbar .brand {
+    padding: 10px 20px 10px 0px;
+  }
+
+  .carousel {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .carousel .container {
+
+  }
+  .carousel .item {
+    height: 400px;
+  }
+  .carousel img {
+    height: 300px;
+  }
+  .carousel-caption {
+    width: 65%;
+    padding: 0 70px;
+    margin-top: 100px;
+  }
+  .carousel-caption h1 {
+    font-size: 30px;
+  }
+  .carousel-caption .lead,
+  .carousel-caption .btn {
+    font-size: 18px;
   }
 
   /* Widen masthead and social buttons to fill body padding */
@@ -337,8 +487,12 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 .subhead h1 {
   font-size: 60px;
 }
-.subhead p {
+.subhead .lead {
   margin-bottom: 20px;
+}
+.subhead .subhead-pretitle {
+  margin-bottom: 10px;
+  margin-left: 3px;
 }
 .subhead .navbar {
   display: none;
